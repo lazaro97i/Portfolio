@@ -2,12 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   padding: 0%;
   margin: 0%;
   color: #e2e8f0;
 }
 
-h1{
+h1 {
   font-family: 'Russo One', sans-serif;
+}
+
+h2 {
+  font-family: 'Russo One', sans-serif;
+}
+
+section {
+  background: rgb(28, 25, 23);
+  background: linear-gradient(0deg, rgba(28, 25, 23, 1) 0%, rgba(28, 25, 23, 1) 25%, rgba(28, 25, 23, 0) 68%);
 }

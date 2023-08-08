@@ -13,24 +13,40 @@
 </head>
 
 <body class="bg-stone-950 h-screen w-full">
-  <header class="relative">
-    <nav class="w-screen h-screen absolute z-10 bg-red-700 bg-opacity-40">
-      <img class="w-[50px] absolute right-5 top-5" src="./assets/icons/cancel.svg" alt="cancel">
-      <ul class="flex flex-col gap-7 ml-10 mt-20">
-        <li class="text-xl">Sobre mi</li>
-        <li class="text-xl">Proyectos</li>
-        <li class="text-xl">Contacto</li>
+  <header class="relative flex w-full justify-center">
+    <img id="menu" class="w-[40px] absolute top-5 left-5 cursor-pointer z-10" src="./assets/icons/menu.svg" alt="menu">
+    <nav id="nav"
+      class="w-full max-w-[375px] left-[-400px] h-screen absolute z-10 bg-stone-900 transition-all duration-1000">
+      <div class="w-0 left-[400px] h-screen absolute z-0 transition-all duration-1000"></div>
+      <img id="cancel" class="w-[50px] absolute right-5 top-5" src="./assets/icons/cancel.svg" alt="cancel">
+      <ul class="flex flex-col items-start gap-7 ml-10 mt-20">
+        <li class="text-xl toggleNav">Sobre mi</li>
+        <li class="text-xl toggleNav">Proyectos</li>
+        <li class="text-xl toggleNav">Contacto</li>
       </ul>
     </nav>
-    <section class="flex flex-col justify-center items-center w-full gap-10 relative z-0">
-      <img class="w-[40px] absolute top-5 left-5 cursor-pointer" src="./assets/icons/menu.svg" alt="menu">
-      <img class="w-[40%] mt-10 max-w-[350px]" src="./assets/images/PerfilCirc (2).jpg" alt="foto perfil">
-      <h1 class="text-3xl">Lázaro Tomás Del Prado</h1>
+    <section  class="flex flex-col md:flex-row justify-center items-center md:items-start w-full gap-10 relative z-0 md:px-14  max-w-[1000px] my-10 pb-16 rounded-lg">
+      <img class="w-[47%] max-w-[300px] mt-[5rem] md:mt-16" src="./assets/images/PerfilCirc (2).jpg" alt="foto perfil">
+      <div class="flex flex-col last:justify-center items-center md:mt-16">
+        <h1 class="text-[1.8rem]">Lázaro Tomás Del Prado</h1>
+        <p class="text-2xl font-[200]">Desarrollador Full Stack</p>
+        <div class="grid grid-cols-4 gap-7 border border-stone-200 py-2 px-5 rounded-md mt-10">
+          <a href="mailto:lazarodelprado97@gmail.com"><img class="w-[50px] cursor-pointer" src="./assets/icons/mail.svg"
+              alt="correo"></a>
+          <a href=""><img class="w-[50px] cursor-pointer" src="./assets/icons/wp.svg" alt="whatsapp"></a>
+          <a href=""><img class="w-[50px] cursor-pointer" src="./assets/icons/linkedin.svg" alt="linkedin"></a>
+          <a href=""><img class="w-[50px] cursor-pointer" src="./assets/icons/git.svg" alt="github"></a>
+        </div>
+        <div class="flex flex-col gap-2 items-center justify-center">
+          <h2 class="self-start mt-10 text-[1.4rem] pl-4">Sobre mi</h2>
+          <p class="text-justify w-full px-5 md:p-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quisquam cumque commodi reprehenderit, rem et minima consectetur assumenda dolor illo at, amet, eaque facere animi. Voluptatum, assumenda. Cumque, esse suscipit!</p>
+        </div>
+      </div>
     </section>
   </header>
   <main>
-
   </main>
+  <script type="module" src="./index.js"></script>
 </body>
 
 </html>
