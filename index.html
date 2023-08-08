@@ -7,12 +7,25 @@
   <title>Lazaro Tomas Del Prado</title>
   <link rel="stylesheet" href="./index.css">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-slate-900 h-screen w-full">
-  <header>
-    <section class="flex justify-center mt-10">
-      <h1 class="text-2xl">Lazaro Tomas Del Prado</h1>
+<body class="bg-stone-950 h-screen w-full">
+  <header class="relative">
+    <nav class="w-screen h-screen absolute z-10 bg-red-700 bg-opacity-40">
+      <img class="w-[50px] absolute right-5 top-5" src="./assets/icons/cancel.svg" alt="cancel">
+      <ul class="flex flex-col gap-7 ml-10 mt-20">
+        <li class="text-xl">Sobre mi</li>
+        <li class="text-xl">Proyectos</li>
+        <li class="text-xl">Contacto</li>
+      </ul>
+    </nav>
+    <section class="flex flex-col justify-center items-center w-full gap-10 relative z-0">
+      <img class="w-[40px] absolute top-5 left-5 cursor-pointer" src="./assets/icons/menu.svg" alt="menu">
+      <img class="w-[40%] mt-10 max-w-[350px]" src="./assets/images/PerfilCirc (2).jpg" alt="foto perfil">
+      <h1 class="text-3xl">Lázaro Tomás Del Prado</h1>
     </section>
   </header>
   <main>
