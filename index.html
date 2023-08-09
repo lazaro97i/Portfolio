@@ -10,13 +10,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;800&display=swap"
+    rel="stylesheet">
 </head>
 
 <body class="bg-stone-950 h-screen w-full">
   <header class="relative flex w-full justify-center">
-    <img id="menu" class="w-[40px] absolute top-5 left-5 cursor-pointer z-10" src="./assets/icons/menu.svg" alt="menu">
     <nav id="nav"
-      class="w-full max-w-[375px] left-[-400px] h-screen absolute z-10 bg-stone-900 transition-all duration-1000">
+      class="w-full max-w-[375px] left-[-400px] h-screen fixed z-10 bg-stone-900 transition-all duration-1000">
       <div class="w-0 left-[400px] h-screen absolute z-0 transition-all duration-1000"></div>
       <img id="cancel" class="w-[50px] absolute right-5 top-5" src="./assets/icons/cancel.svg" alt="cancel">
       <ul class="flex flex-col items-start gap-7 ml-10 mt-20">
@@ -25,26 +28,75 @@
         <li class="text-xl toggleNav">Contacto</li>
       </ul>
     </nav>
-    <section  class="flex flex-col md:flex-row justify-center items-center md:items-start w-full gap-10 relative z-0 md:px-14  max-w-[1000px] my-10 pb-16 rounded-lg">
+    <section
+      class="flex flex-col md:flex-row justify-center items-center md:items-start w-full gap-10 relative z-0 md:px-8  max-w-[1000px] mb-10 pb-16 rounded-lg md:pt-10">
+      <img id="menu" class="w-[40px] absolute top-5 left-5 cursor-pointer z-10" src="./assets/icons/menu.svg"
+        alt="menu">
       <img class="w-[47%] max-w-[300px] mt-[5rem] md:mt-16" src="./assets/images/PerfilCirc (2).jpg" alt="foto perfil">
       <div class="flex flex-col last:justify-center items-center md:mt-16">
-        <h1 class="text-[1.8rem]">Lázaro Tomás Del Prado</h1>
-        <p class="text-2xl font-[200]">Desarrollador Full Stack</p>
+        <div class="flex flex-col justify-center items-center">
+          <h1 class="text-[1.8rem]">Lázaro Tomás Del Prado</h1>
+          <p class="text-2xl font-[200] self-start">Desarrollador Full Stack</p>
+        </div>
         <div class="grid grid-cols-4 gap-7 border border-stone-200 py-2 px-5 rounded-md mt-10">
           <a href="mailto:lazarodelprado97@gmail.com"><img class="w-[50px] cursor-pointer" src="./assets/icons/mail.svg"
               alt="correo"></a>
           <a href=""><img class="w-[50px] cursor-pointer" src="./assets/icons/wp.svg" alt="whatsapp"></a>
-          <a href=""><img class="w-[50px] cursor-pointer" src="./assets/icons/linkedin.svg" alt="linkedin"></a>
-          <a href=""><img class="w-[50px] cursor-pointer" src="./assets/icons/git.svg" alt="github"></a>
+          <a href="https://www.linkedin.com/in/lazaro-tomas-del-prado-7682671b8/"><img class="w-[50px] cursor-pointer"
+              src="./assets/icons/linkedin.svg" alt="linkedin"></a>
+          <a href="https://github.com/lazaro97i"><img class="w-[50px] cursor-pointer" src="./assets/icons/git.svg"
+              alt="github"></a>
         </div>
-        <div class="flex flex-col gap-2 items-center justify-center">
-          <h2 class="self-start mt-10 text-[1.4rem] pl-4">Sobre mi</h2>
-          <p class="text-justify w-full px-5 md:p-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quisquam cumque commodi reprehenderit, rem et minima consectetur assumenda dolor illo at, amet, eaque facere animi. Voluptatum, assumenda. Cumque, esse suscipit!</p>
+        <div class="flex flex-col gap-5 items-center justify-center w-full">
+          <h2 class="self-start mt-10 text-[1.4rem] ml-4 border-b w-[50%] ">Sobre mi</h2>
+          <p class="text-justify w-full px-5 md:p-0">¡Hola a todos!, soy un desarrollador apasionado por la programación
+            y la creación de soluciones
+            tecnológicas. Les presento mi portafolio. En él, encontrarán una selección de mis proyectos más
+            destacados, que muestran mis habilidades y experiencia en diferentes áreas del desarrollo de
+            software. Tuve la oportunidad de trabajar en proyectos en equipo que me permitieron aplicar mis
+            conocimientos y desarrollar habilidades en programación web, orientada a objetos y base de datos.</p>
         </div>
       </div>
     </section>
   </header>
-  <main>
+  <main class="relative flex w-full justify-center">
+    <section
+      class="w-full max-w-[1000px] h-auto flex flex-col justify-center items-center py-8 mb-10 rounded-lg px-5 min-h-[185px]">
+      <h2 class="mb-9 text-[1.4rem] self-start border-b w-[50%]">Habilidades</h2>
+      <div class="flex flex-wrap w-full justify-center gap-4">
+        <img title="JavaScript" class="w-[50px] lg:hover:w-[65px] transition-all duration-300"
+          src="./assets/skills/js.png" alt="js">
+        <img title="React" class="w-[50px] lg:hover:w-[65px] transition-all duration-300"
+          src="./assets/skills/React.png" alt="react">
+        <img title="Redux" class="w-[50px] lg:hover:w-[65px] transition-all duration-300"
+          src="./assets/skills/redux.png" alt="redux">
+        <img title="React Native" class="w-[50px] lg:hover:w-[65px] transition-all duration-300"
+          src="./assets/skills/native.png" alt="react native">
+        <img title="NodeJS" class="w-[50px] lg:hover:w-[65px] transition-all duration-300"
+          src="./assets/skills/nodejs.png" alt="node">
+        <img title="Express" class="w-[50px] lg:hover:w-[65px] transition-all duration-300"
+          src="./assets/skills/express.png" alt="express">
+        <img title="MongoDB" class="w-[50px] lg:hover:w-[65px] transition-all duration-300"
+          src="./assets/skills/mongo.png" alt="mongoDB">
+        <img title="HTML" class="w-[50px] lg:hover:w-[65px] transition-all duration-300"
+          src="./assets/skills/html-logo.png" alt="html logo">
+        <img title="CSS" class="w-[50px] lg:hover:w-[65px] transition-all duration-300"
+          src="./assets/skills/css-logo.png" alt="css logo">
+        <img title="Tailwind" class="w-[50px] lg:hover:w-[65px] transition-all duration-300"
+          src="./assets/skills/tailwind.png" alt="tailwind">
+        <img title="Bootstrap" class="w-[50px] lg:hover:w-[65px] transition-all duration-300"
+          src="./assets/skills/boostrap.png" alt="boostrap">
+        <img title="Postman" class="w-[50px] lg:hover:w-[65px] transition-all duration-300"
+          src="./assets/skills/postman.png" alt="postman">
+        <img title="Git" class="w-[50px] lg:hover:w-[65px] transition-all duration-300" src="./assets/skills/git.png"
+          alt="git">
+        <img title="GitHub" class="w-[50px] lg:hover:w-[65px] transition-all duration-300"
+          src="./assets/skills/github.png" alt="github">
+      </div>
+      <div class="mt-10 w-full">
+        <h2 class="text-[1.4rem] self-start border-b w-[50%]">Proyectos</h2>
+      </div>
+    </section>
   </main>
   <script type="module" src="./index.js"></script>
 </body>
