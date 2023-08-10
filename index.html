@@ -29,10 +29,61 @@
       </ul>
     </nav>
     <section
-      class="flex flex-col md:flex-row justify-center items-center md:items-start w-full gap-10 relative z-0 md:px-8  max-w-[1000px] mb-10 pb-16 rounded-lg md:pt-10">
+      class="flex flex-col md:grid md:grid-cols-2 justify-center items-center md:items-start w-full gap-10 relative z-0 md:px-8  max-w-[1000px] mb-10 pb-16 rounded-lg md:pt-10">
       <img id="menu" class="w-[40px] absolute top-5 left-5 cursor-pointer z-10" src="./assets/icons/menu.svg"
         alt="menu">
-      <img class="w-[47%] max-w-[300px] mt-[5rem] md:mt-16" src="./assets/images/PerfilCirc (2).jpg" alt="foto perfil">
+      <div class="flex flex-wrap md:flex-col md:flex-nowrap justify-center items-center h-full">
+        <img class="w-full max-w-[300px] mt-[5rem] self-start mb-8" src="./assets/images/PerfilCirc (2).jpg"
+          alt="foto perfil">
+        <div class="w-[200px] border border-stone-200 rounded-lg flex justify-center flex-wrap self-end">
+          <div class="w-full h-[100px] overflow-hidden relative hidden md:inline">
+            <div class="w-full h-full bg-white absolute bg-opacity-50 hover:bg-opacity-0 transition-all duration-300">
+            </div>
+            <img class="object-cover object-top" src="./assets/images/Lazaro_Tomas_Del_Prado.png" alt="">
+          </div>
+          <p class="text-lg my-3 flex gap-2 cursor-pointer hover:border-b border-stone-200">Curriculum Vitae
+            <svg width="30px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" fill="#e7e5e4">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <title>open-external</title>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g id="icon" fill="#e7e5e4" transform="translate(85.333333, 64.000000)">
+                    <path
+                      d="M128,63.999444 L128,106.666444 L42.6666667,106.666667 L42.6666667,320 L256,320 L256,234.666444 L298.666,234.666444 L298.666667,362.666667 L4.26325641e-14,362.666667 L4.26325641e-14,64 L128,63.999444 Z M362.666667,1.42108547e-14 L362.666667,170.666667 L320,170.666667 L320,72.835 L143.084945,249.751611 L112.915055,219.581722 L289.83,42.666 L192,42.6666667 L192,1.42108547e-14 L362.666667,1.42108547e-14 Z"
+                      id="Combined-Shape"> </path>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </p>
+        </div>
+        <div class="w-[200px] border border-stone-200 rounded-lg flex justify-center flex-wrap self-end">
+          <div class="w-full h-[100px] overflow-hidden relative hidden md:inline">
+            <div class="w-full h-full bg-white absolute bg-opacity-50 hover:bg-opacity-0 transition-all duration-300">
+            </div>
+            <img class="object-cover object-top" src="./assets/images/Lazaro_Tomas_Del_Prado.png" alt="">
+          </div>
+          <p class="text-lg my-3 flex gap-2 cursor-pointer hover:border-b border-stone-200">Curriculum Vitae
+            <svg width="30px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" fill="#e7e5e4">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <title>open-external</title>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g id="icon" fill="#e7e5e4" transform="translate(85.333333, 64.000000)">
+                    <path
+                      d="M128,63.999444 L128,106.666444 L42.6666667,106.666667 L42.6666667,320 L256,320 L256,234.666444 L298.666,234.666444 L298.666667,362.666667 L4.26325641e-14,362.666667 L4.26325641e-14,64 L128,63.999444 Z M362.666667,1.42108547e-14 L362.666667,170.666667 L320,170.666667 L320,72.835 L143.084945,249.751611 L112.915055,219.581722 L289.83,42.666 L192,42.6666667 L192,1.42108547e-14 L362.666667,1.42108547e-14 Z"
+                      id="Combined-Shape"> </path>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </p>
+        </div>
+      </div>
       <div class="flex flex-col last:justify-center items-center md:mt-16">
         <div class="flex flex-col justify-center items-center">
           <h1 class="text-[1.8rem]">Lázaro Tomás Del Prado</h1>
@@ -63,7 +114,7 @@
     <section
       class="w-full max-w-[1000px] h-auto flex flex-col justify-center items-center py-8 mb-10 rounded-lg px-5 min-h-[185px]">
       <h2 class="mb-9 text-[1.4rem] self-start border-b w-[50%]">Habilidades</h2>
-      <div class="flex flex-wrap w-full justify-center gap-4">
+      <div class="flex flex-wrap w-full justify-center gap-4 maxh">
         <img title="JavaScript" class="w-[50px] lg:hover:w-[65px] transition-all duration-300"
           src="./assets/skills/js.png" alt="js">
         <img title="React" class="w-[50px] lg:hover:w-[65px] transition-all duration-300"
@@ -95,6 +146,11 @@
       </div>
       <div class="mt-10 w-full">
         <h2 class="text-[1.4rem] self-start border-b w-[50%]">Proyectos</h2>
+        <section class="w-full flex ">
+          <div class="w-[250px]">
+
+          </div>
+        </section>
       </div>
     </section>
   </main>
