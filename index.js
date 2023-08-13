@@ -1,15 +1,12 @@
-const nav = document.getElementById('nav')
-const menu = document.getElementById('menu')
-const cancel = document.getElementById('cancel')
-const toggle = Array.from(document.getElementsByClassName('toggleNav'))
+const menu = document.getElementById("menu")
+const nav = document.getElementById("nav")
 
-menu.addEventListener('click', (e)=>{
-  nav.classList.toggle('left-0')
-})
-cancel.addEventListener('click', (e)=>{
-  nav.classList.toggle('left-0')
-})
-
-toggle.forEach((e)=>e.addEventListener('click', ()=> {
-  nav.classList.toggle('left-0')
-}))
+// menu.addEventListener("click", (e)=>{
+//   if(nav.classList.contains("top-[-25px]")){
+//     nav.classList.remove("top-[-25px]")
+//     nav.classList.add("top-7")
+//   }else{
+//     nav.classList.remove("top-7")
+//     nav.classList.add("top-[-25px]")
+//   }
+// })
