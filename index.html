@@ -17,6 +17,22 @@
 </head>
 
 <body class="bg-stone-950 min-h-screen w-full">
+  <span id="btnUp" class="w-0 overflow-hidden cursor-pointer fixed bottom-11 right-5 z-20 xl:right-32 xl:bottom-20 transition-all duration-300"><svg
+      viewBox="-3.2 -3.2 38.40 38.40" xmlns="http://www.w3.org/2000/svg" fill="#e7e5e4">
+      <g id="SVGRepo_bgCarrier" stroke-width="0">
+        <rect x="-3.2" y="-3.2" width="38.40" height="38.40" rx="19.2" fill="#e7e5e4" strokewidth="0"></rect>
+      </g>
+      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC"
+        stroke-width="0.064"></g>
+      <g id="SVGRepo_iconCarrier">
+        <g fill="none" fill-rule="evenodd">
+          <path d="m0 0h32v32h-32z"></path>
+          <path
+            d="m16 0c8.836556 0 16 7.163444 16 16s-7.163444 16-16 16-16-7.163444-16-16 7.163444-16 16-16zm.0142136 11-.0209322.021-.0222136-.021-7.0710678 7.0710678 1.4142136 1.4142136 5.6790678-5.6782814 5.6777864 5.6782814 1.4142136-1.4142136z"
+            fill="#4b8ce6"></path>
+        </g>
+      </g>
+    </svg></span>
   <header class="flex w-full justify-center mt-10">
     <!-- <nav id="nav"
       class="w-full max-w-[375px] left-[-400px] h-screen fixed z-10 bg-stone-900 transition-all duration-1000">
@@ -31,11 +47,11 @@
     <section
       class="flex flex-col md:grid md:grid-cols-2 justify-center items-center md:items-start w-full gap-10 relative z-0 md:px-8  max-w-[1200px] mb-5 pb-10 rounded-lg md:pt-10 overflow-hidden">
       <!-- <img id="menu" class="w-[35px] cursor-pointer absolute left-3 top-5 z-10" src="./assets/icons/menu.svg" alt=""> -->
-      <nav id="nav" class="absolute top-5 w-full transition-all duration-300">
-        <ul class="flex justify-center items-center gap-10 md:gap-20 pb-3 h-auto">
-          <li class="text-[#4b8ce6] text-lg cursor-pointer">Proyectos</li>
-          <li class="text-[#4b8ce6] text-lg cursor-pointer">Habilidades</li>
-          <li class="text-[#4b8ce6] text-lg cursor-pointer">Contacto</li>
+      <nav id="nav" class="fixed top-0 left-0 w-full transition-all duration-300 bg-black bg-opacity-95">
+        <ul class="flex justify-center items-center gap-10 md:gap-20 py-3 h-auto">
+          <li id="btnProjects" class="text-[#4b8ce6] text-lg cursor-pointer">Proyectos</li>
+          <li id="btnHabilities" class="text-[#4b8ce6] text-lg cursor-pointer">Habilidades</li>
+          <li id="btnContact" class="text-[#4b8ce6] text-lg cursor-pointer">Contacto</li>
         </ul>
       </nav>
       <!-- <img id="menu" class="w-[40px] absolute top-5 left-5 cursor-pointer z-10" src="./assets/icons/menu.svg"
@@ -123,7 +139,7 @@
   <main class="flex w-full justify-center">
     <section
       class="w-full max-w-[1200px] h-auto flex flex-col justify-center items-center py-8 mb-10 rounded-lg px-5 min-h-[185px]">
-      <h2 class="mb-9 text-[1.4rem] self-start border-b w-[50%]">Habilidades</h2>
+      <h2 id="habilities" class="mb-9 text-[1.4rem] self-start border-b w-[50%]">Habilidades</h2>
       <div class="flex flex-wrap w-full justify-center gap-4 maxh">
         <img title="JavaScript" class="w-[50px] lg:hover:scale-125 transition-all duration-300"
           src="./assets/skills/js.png" alt="js">
@@ -154,13 +170,8 @@
         <img title="GitHub" class="w-[50px] lg:hover:scale-125 transition-all duration-300"
           src="./assets/skills/github.png" alt="github">
       </div>
-      <div class="mt-10 w-full">
+      <div id="projects" class="mt-10 w-full">
         <h2 class="text-[1.4rem] self-start border-b w-[50%]">Proyectos</h2>
-        <section class="w-full flex ">
-          <div class="w-[250px]">
-
-          </div>
-        </section>
       </div>
     </section>
   </main>

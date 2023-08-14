@@ -1,12 +1,26 @@
-const menu = document.getElementById("menu")
-const nav = document.getElementById("nav")
+const btnHabi = document.getElementById("btnHabilities")
+const habilities = document.getElementById("habilities")
+const top = document.getElementById("btnUp")
 
-// menu.addEventListener("click", (e)=>{
-//   if(nav.classList.contains("top-[-25px]")){
-//     nav.classList.remove("top-[-25px]")
-//     nav.classList.add("top-7")
-//   }else{
-//     nav.classList.remove("top-7")
-//     nav.classList.add("top-[-25px]")
-//   }
-// })
+
+btnHabi.addEventListener("click", (e)=> {
+  const href = habilities.offsetTop
+  window.scroll({top: href, behavior: "smooth"})
+})
+top.addEventListener("click", (e)=> {
+  window.scroll({
+    top:0,
+    behavior: "smooth"
+  })
+})
+
+window.addEventListener("scroll", (e)=> {
+  if(window.scrollY > 500){
+    top.classList.add("w-12")
+    top.classList.remove("w-0")
+  }else{
+    top.classList.remove("w-12")
+    top.classList.add("w-0")
+  }
+  console.log(window.scrollY)
+})
