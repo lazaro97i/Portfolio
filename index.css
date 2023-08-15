@@ -34,3 +34,9 @@ section {
   background: linear-gradient(0deg, rgba(9, 9, 11, 1) 0%, rgba(9, 9, 11, 0.908000700280112) 50%, rgba(9, 9, 11, 0) 100%);
   margin: 0 1rem;
 }
+
+.contact-head {
+  background: rgb(54, 112, 218);
+  background: radial-gradient(circle, rgba(54, 112, 218, 0.42620798319327735) 0%, rgba(54, 112, 218, 0) 100%);
+  border-color: rgba(54, 111, 218, 0.432);
+}
