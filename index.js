@@ -2,18 +2,23 @@ import projects from "./projects.js"
 
 const btnHabi = document.getElementById("btnHabilities")
 const habilities = document.getElementById("habilities")
+const btnProj = document.getElementById("btnProjects")
+const secProj = document.getElementById("projects")
+const btnContact = document.getElementById("btnContact")
+const contact = document.getElementById("contact")
 const top = document.getElementById("btnUp")
 const artProjects = document.getElementById("articleProjects")
+const copy = document.getElementById("copy")
 
 const renderProject = () => {
   let fragment = ""
   fragment += projects.map((p) => {
     return `<div class="w-[250px] bg-[#101628] rounded-b-md">
-      <div class="relative z-0">
+      <div class="relative mb-2 z-0">
       <a href="${p.deploy}" target="_blank" class="w-full absolute bg-black z-0 h-[123px] bg-opacity-30 md:hover:bg-opacity-0 cursor-pointer transition-all duration-300"></a>
       <img class="w-full h-[123px] object-contain bg-white z-0" src="${p.image}" alt="ataraxia" />
       </div>
-      <h2 class="text-xl w-full text-start pl-3 mt-2 text-[#9cc9f4]">${p.name}</h2>
+      <a href="${p.deploy}" target="_blank" class="text-xl font-[500] w-full text-start pl-3 text-[#9cc9f4] ${p.deploy ? null : "pointer-events-none"}">${p.name}</a>
       <p class="text-sm pl-3 mb-2">${p.category}</p>
       <div class="contact-head flex px-3 py-2 mb-2 items-center justify-evenly flex-wrap gap-1">
        ${
@@ -38,8 +43,23 @@ const renderProject = () => {
 
 renderProject()
 
+const renderCopy = () => {
+  let year = new Date()
+  copy.innerHTML = `<p class="text-[#99c9f7]">Lázaro Tomás Del Prado © Año ${year.getFullYear()}</p>`
+}
+
+renderCopy()
+
 btnHabi.addEventListener("click", (e) => {
-  const href = habilities.offsetTop
+  const href = habilities.offsetTop - 68
+  window.scroll({ top: href, behavior: "smooth" })
+})
+btnProj.addEventListener("click", (e) => {
+  const href = secProj.offsetTop - 68
+  window.scroll({ top: href, behavior: "smooth" })
+})
+btnContact.addEventListener("click", (e) => {
+  const href = contact.offsetTop - 68
   window.scroll({ top: href, behavior: "smooth" })
 })
 top.addEventListener("click", (e) => {

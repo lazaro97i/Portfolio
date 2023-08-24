@@ -29,10 +29,21 @@ body {
   background-position: top center;
 }
 
+.contact {
+  background: rgb(9, 9, 11);
+  background: linear-gradient(0deg, rgba(9, 9, 11, 1) 0%, rgba(9, 9, 11, 0.47102591036414565) 100%);
+}
+
 section {
   background: rgb(9, 9, 11);
   background: linear-gradient(0deg, rgba(9, 9, 11, 1) 0%, rgba(9, 9, 11, 0.908000700280112) 50%, rgba(9, 9, 11, 0) 100%);
   margin: 0 1rem;
+}
+
+
+textarea {
+  background: rgb(16, 22, 40);
+  background: linear-gradient(0deg, rgba(16, 22, 40, 1) 0%, rgba(16, 22, 40, 0.08167016806722693) 100%);
 }
 
 .contact-head {

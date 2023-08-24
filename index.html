@@ -17,7 +17,8 @@
 </head>
 
 <body class="bg-stone-950 min-h-screen w-full">
-  <span id="btnUp" class="w-0 overflow-hidden cursor-pointer fixed bottom-11 right-5 z-20 xl:right-32 xl:bottom-20 transition-all duration-300"><svg
+  <span id="btnUp"
+    class="w-0 overflow-hidden cursor-pointer fixed bottom-11 right-5 z-20 xl:right-32 xl:bottom-20 transition-all duration-300"><svg
       viewBox="-3.2 -3.2 38.40 38.40" xmlns="http://www.w3.org/2000/svg" fill="#e7e5e4">
       <g id="SVGRepo_bgCarrier" stroke-width="0">
         <rect x="-3.2" y="-3.2" width="38.40" height="38.40" rx="19.2" fill="#e7e5e4" strokewidth="0"></rect>
@@ -142,7 +143,7 @@
       <div id="projects" class="mt-10 w-full">
         <h2 class="text-[1.4rem] self-start border-b w-[50%]">Proyectos</h2>
         <article id="articleProjects" class="flex flex-wrap justify-around items-center py-10 px-5 gap-12">
-          
+
         </article>
       </div>
       <h2 id="habilities" class="mb-9 text-[1.4rem] self-start border-b w-[50%]">Habilidades</h2>
@@ -178,6 +179,53 @@
       </div>
     </section>
   </main>
+  <footer class="flex flex-wrap w-full justify-center">
+    <section
+      class="contact w-full max-w-[1200px] h-auto flex flex-col justify-center items-center py-8 mb-24 rounded-lg px-5 min-h-[185px]">
+      <h2 id="contact" class="mb-9 text-[1.4rem] self-start border-b w-[50%]">Contacto</h2>
+      <p class="md:w-4/5">
+        Gracias por visitar mi portafolio y por tomarte el tiempo de explorar mi trabajo y experiencia. Si deseas
+        conectarte, colaborar o simplemente compartir tus pensamientos, estoy aquí para escucharte. Por favor, tómate un
+        momento para completar este formulario de contacto.
+      </p>
+      <div class="w-full flex justify-center items-center my-10">
+        <form class="mt-10 flex flex-col w-full items-center gap-5" action="post">
+          <label class="w-full max-w-[590px] col-span-2 grid grid-cols-3 text-start" for="name">
+            Nombre:
+            <input class="bg-transparent focus:border-[#2a4ba3] transition-all duration-300 border-b outline-none col-span-2" type="text" name="name" id="name">
+          </label>
+          <label class="w-full max-w-[590px] col-span-2 grid grid-cols-3 text-start" for="email">
+            Email:
+            <input class="bg-transparent focus:border-[#2a4ba3] transition-all duration-300 border-b outline-none col-span-2" type="email" name="email" id="email">
+          </label>
+          <label class="w-full max-w-[590px] col-span-2 grid grid-cols-3 text-start" for="subjet">
+            Asunto:
+            <input class="bg-transparent focus:border-[#2a4ba3] transition-all duration-300 border-b outline-none col-span-2" type="text" name="subjet" id="subjet">
+          </label>
+          <label class="text-start w-full max-w-[590px]" for="message">
+            Mensaje:
+            <textarea class="outline-none w-full resize-none h-[100px] mt-3" name="message" id="message"></textarea>
+          </label>
+          <button class="self-center cursor-pointer py-2 px-6 font-[500] text-[#99c9f7] hover:text-[#e7e5e4] bg-[#244184] rounded-md hover:bg-[#264aa7] transition-all duration-300 border border-[#99c9f7]" type="submit">Enviar!</button>
+        </form>
+      </div>
+      <p class="md:w-4/5">Gracias nuevamente por tu tiempo y consideración. Espero con interés la oportunidad de conectarnos y discutir cómo podemos trabajar y contribuir juntos.</p>
+    </section>
+    <div class="bg-[#09090b] bg-opacity-70 w-full py-10 flex flex-wrap gap-10 justify-around">
+      <div id="copy" class="h-auto flex items-center">
+        
+      </div>
+      <article class="w-auto flex flex-col items-start">
+        <p class="text-start w-[280px]">También puedes encontrarme en las redes sociales:</p>
+        <div class="flex flex-col items-start gap-2 mt-2">
+          <a href="" class="text-sm  text-center"><span class="text-[#99c9f7] border-[#99c9f7] pb-[.1rem] hover:text-[#e7e5e4] hover:border-[#e7e5e4] border-b">Linkedin</span></a>
+          <a href="" class="text-sm  text-center"><span class="text-[#99c9f7] border-[#99c9f7] pb-[.1rem] hover:text-[#e7e5e4] hover:border-[#e7e5e4] border-b">WhatsApp</span></a>
+          <a href="" class="text-sm  text-center"><span class="text-[#99c9f7] border-[#99c9f7] pb-[.1rem] hover:text-[#e7e5e4] hover:border-[#e7e5e4] border-b">Instagram</span></a>
+          <a href="" class="text-sm  text-center"><span class="text-[#99c9f7] border-[#99c9f7] pb-[.1rem] hover:text-[#e7e5e4] hover:border-[#e7e5e4] border-b">GitHub</span></a>
+        </div>
+      </article>
+    </div>
+  </footer>
   <script type="module" src="./index.js"></script>
 </body>
 
