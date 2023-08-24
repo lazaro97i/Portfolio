@@ -35,20 +35,9 @@
       </g>
     </svg></span>
   <header class="flex w-full justify-center mt-10">
-    <!-- <nav id="nav"
-      class="w-full max-w-[375px] left-[-400px] h-screen fixed z-10 bg-stone-900 transition-all duration-1000">
-      <div class="w-0 left-[400px] h-screen absolute z-0 transition-all duration-1000"></div>
-      <img id="cancel" class="w-[50px] absolute right-5 top-5" src="./assets/icons/cancel.svg" alt="cancel">
-      <ul class="flex flex-col items-start gap-7 ml-10 mt-20">
-        <li class="text-xl toggleNav">Sobre mi</li>
-        <li class="text-xl toggleNav">Proyectos</li>
-        <li class="text-xl toggleNav">Contacto</li>
-      </ul>
-    </nav> -->
     <section
-      class="flex flex-col md:grid md:grid-cols-2 justify-center items-center md:items-start w-full gap-10 relative z-0 md:px-8  max-w-[1200px] mb-5 pb-10 rounded-lg md:pt-10 overflow-hidden">
-      <!-- <img id="menu" class="w-[35px] cursor-pointer absolute left-3 top-5 z-10" src="./assets/icons/menu.svg" alt=""> -->
-      <nav id="nav" class="fixed top-0 left-0 w-full bg-black bg-opacity-95 z-20">
+      class="flex flex-col md:grid md:grid-cols-2 justify-center items-center md:items-start w-full gap-10 relative z-10 md:px-8  max-w-[1200px] mb-5 pb-10 rounded-lg md:pt-10 overflow-hidden">
+      <nav id="nav" class="fixed top-0 left-0 w-full bg-black bg-opacity-95">
         <ul class="flex justify-center items-center gap-10 md:gap-20 py-3 h-auto">
           <li id="btnProjects" class="text-[#6dabed] text-lg cursor-pointer">Proyectos</li>
           <li id="btnHabilities" class="text-[#6dabed] text-lg cursor-pointer">Habilidades</li>
@@ -189,7 +178,7 @@
         momento para completar este formulario de contacto.
       </p>
       <div class="w-full flex justify-center items-center my-10">
-        <form class="mt-10 flex flex-col w-full items-center gap-5" action="post">
+        <form class="mt-10 flex flex-col w-full items-center gap-5" >
           <label class="w-full max-w-[590px] col-span-2 grid grid-cols-3 text-start" for="name">
             Nombre:
             <input class="bg-transparent focus:border-[#2a4ba3] transition-all duration-300 border-b outline-none col-span-2" type="text" name="name" id="name">
@@ -205,6 +194,9 @@
           <label class="text-start w-full max-w-[590px]" for="message">
             Mensaje:
             <textarea class="outline-none w-full resize-none h-[100px] mt-3" name="message" id="message"></textarea>
+            <div id="characters" class="w-full">
+              
+            </div>
           </label>
           <button class="self-center cursor-pointer py-2 px-6 font-[500] text-[#99c9f7] hover:text-[#e7e5e4] bg-[#244184] rounded-md hover:bg-[#264aa7] transition-all duration-300 border border-[#99c9f7]" type="submit">Enviar!</button>
         </form>

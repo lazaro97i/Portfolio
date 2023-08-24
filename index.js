@@ -9,13 +9,22 @@ const contact = document.getElementById("contact")
 const top = document.getElementById("btnUp")
 const artProjects = document.getElementById("articleProjects")
 const copy = document.getElementById("copy")
+const areaMessage = document.getElementById("message")
+const characters = document.getElementById("characters")
+
+areaMessage.addEventListener("input", (e) => {
+  characters.innerHTML = `<p class="text-end">${e.target.textLength} / 1000</p>`
+  if(e.target.textLength === 1000){
+    areaMessage.setAttribute('maxlength',"1000")
+  }
+})
 
 const renderProject = () => {
   let fragment = ""
   fragment += projects.map((p) => {
     return `<div class="w-[250px] bg-[#101628] rounded-b-md">
-      <div class="relative mb-2 z-0">
-      <a href="${p.deploy}" target="_blank" class="w-full absolute bg-black z-0 h-[123px] bg-opacity-30 md:hover:bg-opacity-0 cursor-pointer transition-all duration-300"></a>
+      <div class="mb-2 relative">
+      <a href="${p.deploy}" target="_blank" class="w-full absolute z-1 bg-black h-[123px] bg-opacity-30 md:hover:bg-opacity-0 cursor-pointer transition-all duration-300"></a>
       <img class="w-full h-[123px] object-contain bg-white z-0" src="${p.image}" alt="ataraxia" />
       </div>
       <a href="${p.deploy}" target="_blank" class="text-xl font-[500] w-full text-start pl-3 text-[#9cc9f4] ${p.deploy ? null : "pointer-events-none"}">${p.name}</a>
