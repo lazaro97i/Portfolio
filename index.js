@@ -11,6 +11,40 @@ const artProjects = document.getElementById("articleProjects")
 const copy = document.getElementById("copy")
 const areaMessage = document.getElementById("message")
 const characters = document.getElementById("characters")
+const inpName = document.getElementById("name")
+const inpEmail = document.getElementById("email")
+const inpSubj = document.getElementById("subjet")
+const inpMessage = document.getElementById("message")
+const btnSubmit = document.getElementById("submit")
+
+let name = ""
+let email = ""
+let subjet = ""
+let message = ""
+
+inpName.addEventListener("input", (e)=>{
+  name = e.target.value
+})
+inpEmail.addEventListener("input", (e)=>{
+  email = e.target.value
+})
+inpSubj.addEventListener("input", (e)=>{
+  subjet = e.target.value
+})
+inpMessage.addEventListener("input", (e)=>{
+  message = e.target.value
+})
+
+btnSubmit.addEventListener("click", (e) => {
+  e.preventDefault()
+  const data = {
+    name: name,
+    email: email,
+    subjet: subjet,
+    message: message
+  }
+  console.log(data)
+})
 
 areaMessage.addEventListener("input", (e) => {
   characters.innerHTML = `<p class="text-end">${e.target.textLength} / 1000</p>`
@@ -24,7 +58,7 @@ const renderProject = () => {
   fragment += projects.map((p) => {
     return `<div class="w-[250px] bg-[#101628] rounded-b-md">
       <div class="mb-2 relative">
-      <a href="${p.deploy}" target="_blank" class="w-full absolute z-1 bg-black h-[123px] bg-opacity-30 md:hover:bg-opacity-0 cursor-pointer transition-all duration-300"></a>
+      <a href="${p.deploy}" target="_blank" class="w-full ${p.deploy ? null : "pointer-events-none"} absolute z-1 bg-black h-[123px] bg-opacity-10 md:hover:bg-opacity-0 md:bg-opacity-30 cursor-pointer transition-all duration-300"></a>
       <img class="w-full h-[123px] object-contain bg-white z-0" src="${p.image}" alt="ataraxia" />
       </div>
       <a href="${p.deploy}" target="_blank" class="text-xl font-[500] w-full text-start pl-3 text-[#9cc9f4] ${p.deploy ? null : "pointer-events-none"}">${p.name}</a>
@@ -32,7 +66,7 @@ const renderProject = () => {
       <div class="contact-head flex px-3 py-2 mb-2 items-center justify-evenly flex-wrap gap-1">
        ${
         p.technologies.map((t) => {
-          return `<p key="${t}" class="px-1 text-[10px] bg-[#1c2a4f] text-[#9cc9f4] border border-[#9cc9f4] rounded-md text-center">${t}</p>`
+          return `<p key="${t}" class="px-1 my-1 text-[10px] font-[600] rounded-md text-center ${t}">${t}</p>`
         }).join("")
        }
       </div >
