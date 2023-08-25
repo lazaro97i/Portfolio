@@ -43,7 +43,7 @@ const renderProject = () => {
         <a class="font-[500] md:hover:text-[#9cc9f4] transition-all duration-200" target="_blank" href="${p.repositories.back}" >Back</a>
         <a class="font-[500] ${p.repositories.mobile ? null : "pointer-events-none"} md:hover:text-[#9cc9f4] transition-all duration-200" target="_blank" href="${p.repositories.mobile}" >${p.repositories.mobile ? "Mobile" : "-"}</a>
        </div>
-       <a class="${p.deploy ? null : "pointer-events-none"} btnDeploy font-[500] w-full text-center py-1 bg-[#1e2f5c] rounded-b-md hover:bg-[#1e356e] transition-all duration-300" href="${p.deploy}" target="_blank">${p.deploy ? "Deploy" : "-"}</a>
+       <a class="${p.deploy ? null : "pointer-events-none"} btnDeploy font-[500] w-full text-center py-1 bg-[#1e2f5c] rounded-b-md hover:bg-[#1e356e] transition-all duration-300 min-h-[32px]" href="${p.deploy}" target="_blank">${p.deploy ? "Deploy" : ""}</a>
       </div>
     </div > `
   }).join("")

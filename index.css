@@ -37,7 +37,7 @@ section {
 
 textarea {
   background: rgb(16, 22, 40);
-  background: linear-gradient(0deg, rgba(16, 22, 40, 1) 0%, rgba(16, 22, 40, 0.08167016806722693) 100%);
+  background: linear-gradient(180deg, rgba(16, 22, 40, 1) 19%, rgba(16, 22, 40, 0) 100%);
 }
 
 .contact {
