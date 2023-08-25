@@ -29,21 +29,25 @@ body {
   background-position: top center;
 }
 
-.contact {
-  background: rgb(9, 9, 11);
-  background: linear-gradient(0deg, rgba(9, 9, 11, 1) 0%, rgba(9, 9, 11, 0.47102591036414565) 100%);
-}
-
 section {
   background: rgb(9, 9, 11);
   background: linear-gradient(0deg, rgba(9, 9, 11, 1) 0%, rgba(9, 9, 11, 0.908000700280112) 50%, rgba(9, 9, 11, 0) 100%);
   margin: 0 1rem;
 }
 
-
 textarea {
   background: rgb(16, 22, 40);
   background: linear-gradient(0deg, rgba(16, 22, 40, 1) 0%, rgba(16, 22, 40, 0.08167016806722693) 100%);
+}
+
+.contact {
+  background: rgb(9, 9, 11);
+  background: linear-gradient(180deg, rgba(9, 9, 11, 1) 0%, rgba(9, 9, 11, 0.14889705882352944) 100%);
+}
+
+.divContact {
+  background: rgb(9, 9, 11);
+  background: linear-gradient(180deg, rgba(9, 9, 11, 1) 0%, rgba(9, 9, 11, 0.14889705882352944) 100%);
 }
 
 .contact-head {
@@ -51,40 +55,48 @@ textarea {
   background: radial-gradient(circle, rgba(54, 112, 218, 0.42620798319327735) 0%, rgba(54, 112, 218, 0) 100%);
   border-color: rgba(54, 111, 218, 0.432);
 }
-.JavaScript{
+
+.JavaScript {
   background-color: #ffee32;
   border: 1px solid #ffee32;
   color: #202020;
 }
-.React{
+
+.React {
   background-color: rgb(32, 32, 32);
   border: 1px solid #00d8d8;
   color: #00d8d8;
 }
-.Redux{
+
+.Redux {
   border: 1px solid #6930c3;
   background-color: #6930c3;
   border: 1px solid #864fdf;
 }
-.Node{
+
+.Node {
   background: #e7e5e4;
   border: 1px solid #008000;
   color: #008000;
 }
-.Express{
+
+.Express {
   background: #e7e5e4;
   border: 1px solid #242424;
   color: #242424;
 }
-.MongoDB{
+
+.MongoDB {
   background: #008000;
   border: 1px solid #e7e5e4;
 }
-.JWT{
+
+.JWT {
   background: #242424;
   border: 1px solid #e7e5e4;
 }
-.Vite{
+
+.Vite {
   background: #e7e5e4;
   color: #6930c3;
   border: 1px solid #864fdf

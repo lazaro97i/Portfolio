@@ -11,40 +11,6 @@ const artProjects = document.getElementById("articleProjects")
 const copy = document.getElementById("copy")
 const areaMessage = document.getElementById("message")
 const characters = document.getElementById("characters")
-const inpName = document.getElementById("name")
-const inpEmail = document.getElementById("email")
-const inpSubj = document.getElementById("subjet")
-const inpMessage = document.getElementById("message")
-const btnSubmit = document.getElementById("submit")
-
-let name = ""
-let email = ""
-let subjet = ""
-let message = ""
-
-inpName.addEventListener("input", (e)=>{
-  name = e.target.value
-})
-inpEmail.addEventListener("input", (e)=>{
-  email = e.target.value
-})
-inpSubj.addEventListener("input", (e)=>{
-  subjet = e.target.value
-})
-inpMessage.addEventListener("input", (e)=>{
-  message = e.target.value
-})
-
-btnSubmit.addEventListener("click", (e) => {
-  e.preventDefault()
-  const data = {
-    name: name,
-    email: email,
-    subjet: subjet,
-    message: message
-  }
-  console.log(data)
-})
 
 areaMessage.addEventListener("input", (e) => {
   characters.innerHTML = `<p class="text-end">${e.target.textLength} / 1000</p>`
@@ -120,4 +86,28 @@ window.addEventListener("scroll", (e) => {
     top.classList.remove("w-12")
     top.classList.add("w-0")
   }
+})
+
+
+//---------------------------------------------------------------
+//-------------EMAILJS
+const btn = document.getElementById('button');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault()
+
+   btn.value = 'Enviando...'
+
+   const serviceID = 'service_80sekxo'
+   const templateID = 'template_sfaekwg'
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Enviar!'
+      alert('Sent!')
+    }, (err) => {
+      btn.value = 'Enviar!'
+      alert(JSON.stringify(err))
+    })
 })
