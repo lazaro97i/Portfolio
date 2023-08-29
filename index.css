@@ -101,3 +101,23 @@ textarea {
   color: #6930c3;
   border: 1px solid #864fdf
 }
+
+.slider .slide {
+  animation: scroll 15s linear infinite;
+  -webkit-animation: scroll 15s linear infinite;
+  width: calc((70px * 28));
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-980px);
+    -webkit-transform: translateX(-980px);
+  }
+}
+/* #articleProjects{
+  grid-auto-columns: calc(100% / 3);
+} */

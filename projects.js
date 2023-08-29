@@ -41,7 +41,21 @@ const projects = [
       mobile: null
     },
     deploy: "https://prestamos.onrender.com/"
-  }
+  },
+  {
+    name: "Minga",
+    image: "./assets/images/gitProject.png",
+    date: "12/2022 - 02/2023",
+    technologies: ["JavaScript","React", "Redux", "React Native", "Node", "Express", "MongoDB", "JWT"],
+    category: "Lectura de mangas",
+    description: "Lectura de mangas online.",
+    repositories: {
+      back: "https://github.com/rodrigohernans/minga-backend",
+      front: "https://github.com/feldrok/minga-frontend",
+      mobile: "https://github.com/feldrok/mobile-minga-red"
+    },
+    deploy: null
+  },
 ]
 
 export default projects
