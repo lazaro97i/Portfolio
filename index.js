@@ -1,4 +1,5 @@
 import projects from "./projects.js"
+import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs'
 
 const btnHabi = document.getElementById("btnHabilities")
 const habilities = document.getElementById("habilities")
@@ -24,50 +25,45 @@ const renderProject = () => {
   let fragment = ""
   fragment += projects.map((p) => {
     return `
-    <div class="w-full flex justify-center items-center card">
-    <div class="w-[250px] bg-[#101628] rounded-b-md">
-    <div class="mb-2 relative">
-    <a href="${p.deploy}" target="_blank" class="w-full ${p.deploy ? null : "pointer-events-none"} absolute z-1 bg-black h-[123px] bg-opacity-10 md:hover:bg-opacity-0 md:bg-opacity-30 cursor-pointer transition-all duration-300"></a>
-    <img class="w-full h-[123px] object-contain bg-white z-0" src="${p.image}" alt="ataraxia" />
+    <div class="swiper-wrapper">
+    <!-- Slides -->
+      <div class="swiper-slide">
+        <div class="w-full flex justify-center items-center card">
+        <div class="w-[250px] bg-[#101628] rounded-b-md">
+        <div class="mb-2 relative">
+        <a href="${p.deploy}" target="_blank" class="w-full ${p.deploy ? null : "pointer-events-none"} absolute z-1 bg-black h-[123px] bg-opacity-10 md:hover:bg-opacity-0 md:bg-opacity-30 cursor-pointer transition-all duration-300"></a>
+        <img class="w-full h-[123px] object-contain bg-white z-0" src="${p.image}" alt="ataraxia" />
+        </div>
+        <a href="${p.deploy}" target="_blank" class="text-xl font-[500] w-full text-start pl-3 text-[#9cc9f4] ${p.deploy ? null : "pointer-events-none"}">${p.name}</a>
+        <p class="text-sm pl-3 mb-2">${p.category}</p>
+        <div class="contact-head flex px-3 py-2 mb-2 items-center justify-evenly flex-wrap gap-1">
+         ${p.technologies.map((t) => {
+          return `<p key="${t}" class="px-1 my-1 text-[10px] font-[600] rounded-md text-center ${t}">${t}</p>`
+        }).join("")
+          }
+        </div >
+        <div class="w-full flex flex-wrap">
+        <p class="pl-3 pb-2">Respositorios:</p>
+         <div class="flex justify-around px-3 border-b border-[#2a4ba3] w-full pb-3">
+          <a class="font-[500] md:hover:text-[#9cc9f4] transition-all duration-200" target="_blank" href="${p.repositories.front}" >Front</a>
+          <a class="font-[500] md:hover:text-[#9cc9f4] transition-all duration-200" target="_blank" href="${p.repositories.back}" >Back</a>
+          <a class="font-[500] ${p.repositories.mobile ? null : "pointer-events-none"} md:hover:text-[#9cc9f4] transition-all duration-200" target="_blank" href="${p.repositories.mobile}" >${p.repositories.mobile ? "Mobile" : "-"}</a>
+         </div>
+         <a class="${p.deploy ? null : "pointer-events-none"} btnDeploy font-[500] w-full text-center py-1 bg-[#1e2f5c] rounded-b-md hover:bg-[#1e356e] transition-all duration-300 min-h-[32px]" href="${p.deploy}" target="_blank">${p.deploy ? "Deploy" : ""}</a>
+        </div>
+      </div > 
+      </div>
+      </div>
     </div>
-    <a href="${p.deploy}" target="_blank" class="text-xl font-[500] w-full text-start pl-3 text-[#9cc9f4] ${p.deploy ? null : "pointer-events-none"}">${p.name}</a>
-    <p class="text-sm pl-3 mb-2">${p.category}</p>
-    <div class="contact-head flex px-3 py-2 mb-2 items-center justify-evenly flex-wrap gap-1">
-     ${p.technologies.map((t) => {
-      return `<p key="${t}" class="px-1 my-1 text-[10px] font-[600] rounded-md text-center ${t}">${t}</p>`
-    }).join("")
-      }
-    </div >
-    <div class="w-full flex flex-wrap">
-    <p class="pl-3 pb-2">Respositorios:</p>
-     <div class="flex justify-around px-3 border-b border-[#2a4ba3] w-full pb-3">
-      <a class="font-[500] md:hover:text-[#9cc9f4] transition-all duration-200" target="_blank" href="${p.repositories.front}" >Front</a>
-      <a class="font-[500] md:hover:text-[#9cc9f4] transition-all duration-200" target="_blank" href="${p.repositories.back}" >Back</a>
-      <a class="font-[500] ${p.repositories.mobile ? null : "pointer-events-none"} md:hover:text-[#9cc9f4] transition-all duration-200" target="_blank" href="${p.repositories.mobile}" >${p.repositories.mobile ? "Mobile" : "-"}</a>
-     </div>
-     <a class="${p.deploy ? null : "pointer-events-none"} btnDeploy font-[500] w-full text-center py-1 bg-[#1e2f5c] rounded-b-md hover:bg-[#1e356e] transition-all duration-300 min-h-[32px]" href="${p.deploy}" target="_blank">${p.deploy ? "Deploy" : ""}</a>
-    </div>
-  </div > 
-    </div>
+  <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
   `
   }).join("")
   artProjects.innerHTML = fragment
 }
 
 renderProject()
-
-let card = document.querySelectorAll(".card")
-console.log(card);
-
-document.getElementById("arrowR").addEventListener("click", (e)=>{
-  console.log(e);
-  artProjects.scrollLeft = ""
-})
-document.getElementById("arrowL").addEventListener("click", (e)=>{
-  console.log(e);
-  artProjects.scrollLeft = -card[0].clientWidth
-})
-
 
 const renderCopy = () => {
   let year = new Date()
@@ -140,3 +136,17 @@ document.getElementById('form')
         alert(JSON.stringify(err))
       })
   })
+
+  const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  })
+
+  console.log(swiper)
+  

@@ -118,6 +118,11 @@ textarea {
     -webkit-transform: translateX(-980px);
   }
 }
+
+.swiper {
+  width: 600px;
+  height: 300px;
+}
 /* #articleProjects{
   grid-auto-columns: calc(100% / 3);
 } */

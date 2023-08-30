@@ -14,6 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;800&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 </head>
 
 <body id="body" class="bg-stone-950 min-h-screen w-full relative">
@@ -131,72 +132,62 @@
       class="w-full max-w-[1200px] h-auto flex flex-col justify-center items-center py-8 mb-10 rounded-lg px-5 min-h-[185px]">
       <div id="projects" class="mt-10 w-full relative">
         <h2 class="text-[1.4rem] self-start border-b w-[50%]">Proyectos</h2>
-        <article id="articleProjects" class="grid grid-flow-col auto-cols-[calc(100%_/_3)] max-[900px]:auto-cols-[calc(100%_/_2)] max-[610px]:auto-cols-[calc(100%)] w-full py-12 overflow-hidden">
-          
+        <article id="articleProjects" class="swiper">
+
         </article>
-        <span id="arrowL" class="absolute z-40 top-[250px] left-0 rounded-[50%] bg-[#2a4ba3] border-2 w-[30px] h-[30px] flex justify-center items-center"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6 12H18M6 12L11 7M6 12L11 17" stroke="#e7e5e4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></span>
-        <span id="arrowR" class="absolute z-40 top-[250px] right-0 rounded-[50%] bg-[#2a4ba3] border-2 w-[30px] h-[30px] flex justify-center items-center"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="#e7e5e4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></span>
-          
+        <!-- <span id="arrowL"
+          class="absolute z-40 top-[250px] left-0 rounded-[50%] bg-[#2a4ba3] border-2 w-[30px] h-[30px] flex justify-center items-center"><svg
+            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path d="M6 12H18M6 12L11 7M6 12L11 17" stroke="#e7e5e4" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </g>
+          </svg></span>
+        <span id="arrowR"
+          class="absolute z-40 top-[250px] right-0 rounded-[50%] bg-[#2a4ba3] border-2 w-[30px] h-[30px] flex justify-center items-center"><svg
+            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="#e7e5e4" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </g>
+          </svg></span> -->
+
       </div>
       <h2 id="habilities" class="mb-9 text-[1.4rem] self-start border-b w-[50%]">Habilidades</h2>
       <article class="overflow-hidden slider w-full max-w-[980px] m-auto">
         <div class="flex slide gap-5">
-          <img title="JavaScript" class="w-[50px]"
-            src="./assets/skills/js.png" alt="js">
-          <img title="React" class="w-[50px]"
-            src="./assets/skills/React.png" alt="react">
-          <img title="Redux" class="w-[50px]"
-            src="./assets/skills/redux.png" alt="redux">
-          <img title="React Native" class="w-[50px]"
-            src="./assets/skills/native.png" alt="react native">
-          <img title="NodeJS" class="w-[50px]"
-            src="./assets/skills/nodejs.png" alt="node">
-          <img title="Express" class="w-[50px]"
-            src="./assets/skills/express.png" alt="express">
-          <img title="MongoDB" class="w-[50px]"
-            src="./assets/skills/mongo.png" alt="mongoDB">
-          <img title="HTML" class="w-[50px]"
-            src="./assets/skills/html-logo.png" alt="html logo">
-          <img title="CSS" class="w-[50px]"
-            src="./assets/skills/css-logo.png" alt="css logo">
-          <img title="Tailwind" class="w-[50px]"
-            src="./assets/skills/tailwind.png" alt="tailwind">
-          <img title="Bootstrap" class="w-[50px]"
-            src="./assets/skills/boostrap.png" alt="boostrap">
-          <img title="Postman" class="w-[50px]"
-            src="./assets/skills/postman.png" alt="postman">
-          <img title="Git" class="w-[50px]" src="./assets/skills/git.png"
-            alt="git">
-          <img title="GitHub" class="w-[50px]"
-            src="./assets/skills/github.png" alt="github">
-          <img title="JavaScript" class="w-[50px]"
-            src="./assets/skills/js.png" alt="js">
-          <img title="React" class="w-[50px]"
-            src="./assets/skills/React.png" alt="react">
-          <img title="Redux" class="w-[50px]"
-            src="./assets/skills/redux.png" alt="redux">
-          <img title="React Native" class="w-[50px]"
-            src="./assets/skills/native.png" alt="react native">
-          <img title="NodeJS" class="w-[50px]"
-            src="./assets/skills/nodejs.png" alt="node">
-          <img title="Express" class="w-[50px]"
-            src="./assets/skills/express.png" alt="express">
-          <img title="MongoDB" class="w-[50px]"
-            src="./assets/skills/mongo.png" alt="mongoDB">
-          <img title="HTML" class="w-[50px]"
-            src="./assets/skills/html-logo.png" alt="html logo">
-          <img title="CSS" class="w-[50px]"
-            src="./assets/skills/css-logo.png" alt="css logo">
-          <img title="Tailwind" class="w-[50px]"
-            src="./assets/skills/tailwind.png" alt="tailwind">
-          <img title="Bootstrap" class="w-[50px]"
-            src="./assets/skills/boostrap.png" alt="boostrap">
-          <img title="Postman" class="w-[50px]"
-            src="./assets/skills/postman.png" alt="postman">
-          <img title="Git" class="w-[50px]" src="./assets/skills/git.png"
-            alt="git">
-          <img title="GitHub" class="w-[50px]"
-            src="./assets/skills/github.png" alt="github">
+          <img title="JavaScript" class="w-[50px]" src="./assets/skills/js.png" alt="js">
+          <img title="React" class="w-[50px]" src="./assets/skills/React.png" alt="react">
+          <img title="Redux" class="w-[50px]" src="./assets/skills/redux.png" alt="redux">
+          <img title="React Native" class="w-[50px]" src="./assets/skills/native.png" alt="react native">
+          <img title="NodeJS" class="w-[50px]" src="./assets/skills/nodejs.png" alt="node">
+          <img title="Express" class="w-[50px]" src="./assets/skills/express.png" alt="express">
+          <img title="MongoDB" class="w-[50px]" src="./assets/skills/mongo.png" alt="mongoDB">
+          <img title="HTML" class="w-[50px]" src="./assets/skills/html-logo.png" alt="html logo">
+          <img title="CSS" class="w-[50px]" src="./assets/skills/css-logo.png" alt="css logo">
+          <img title="Tailwind" class="w-[50px]" src="./assets/skills/tailwind.png" alt="tailwind">
+          <img title="Bootstrap" class="w-[50px]" src="./assets/skills/boostrap.png" alt="boostrap">
+          <img title="Postman" class="w-[50px]" src="./assets/skills/postman.png" alt="postman">
+          <img title="Git" class="w-[50px]" src="./assets/skills/git.png" alt="git">
+          <img title="GitHub" class="w-[50px]" src="./assets/skills/github.png" alt="github">
+          <img title="JavaScript" class="w-[50px]" src="./assets/skills/js.png" alt="js">
+          <img title="React" class="w-[50px]" src="./assets/skills/React.png" alt="react">
+          <img title="Redux" class="w-[50px]" src="./assets/skills/redux.png" alt="redux">
+          <img title="React Native" class="w-[50px]" src="./assets/skills/native.png" alt="react native">
+          <img title="NodeJS" class="w-[50px]" src="./assets/skills/nodejs.png" alt="node">
+          <img title="Express" class="w-[50px]" src="./assets/skills/express.png" alt="express">
+          <img title="MongoDB" class="w-[50px]" src="./assets/skills/mongo.png" alt="mongoDB">
+          <img title="HTML" class="w-[50px]" src="./assets/skills/html-logo.png" alt="html logo">
+          <img title="CSS" class="w-[50px]" src="./assets/skills/css-logo.png" alt="css logo">
+          <img title="Tailwind" class="w-[50px]" src="./assets/skills/tailwind.png" alt="tailwind">
+          <img title="Bootstrap" class="w-[50px]" src="./assets/skills/boostrap.png" alt="boostrap">
+          <img title="Postman" class="w-[50px]" src="./assets/skills/postman.png" alt="postman">
+          <img title="Git" class="w-[50px]" src="./assets/skills/git.png" alt="git">
+          <img title="GitHub" class="w-[50px]" src="./assets/skills/github.png" alt="github">
         </div>
       </article>
     </section>
