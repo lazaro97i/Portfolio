@@ -22,7 +22,7 @@ h2 {
 body {
   /* background: #09090b; */
   /* background: linear-gradient(0deg, rgba(28, 25, 23, 1) 0%, rgba(28, 25, 23, 1) 25%, rgba(28, 25, 23, 0) 68%); */
-  background-image: url("./assets/images/bg-2.png");
+  background-image: url("/assets/images/bg-2.png");
   background-size: cover;
   background-repeat: no-repeat;
   position: static;
