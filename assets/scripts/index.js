@@ -7,7 +7,7 @@ const secProj = document.getElementById("projects")
 const btnContact = document.getElementById("btnContact")
 const contact = document.getElementById("contact")
 const top = document.getElementById("btnUp")
-const artProjects = document.getElementById("sww")
+const divSwip = document.getElementById("divSwiper")
 const copy = document.getElementById("copy")
 const areaMessage = document.getElementById("message")
 const characters = document.getElementById("characters")
@@ -24,8 +24,7 @@ const renderProject = () => {
   let fragment = ""
   fragment += projects.map((p) => {
     return `
-      <div class="swiper-slide">
-        <div class="flex justify-center items-center card">
+      <div class="swiper-slide flex justify-center w-full">
         <div class="w-[250px] bg-[#101628] rounded-b-md">
         <div class="mb-2 relative">
         <a href="${p.deploy}" target="_blank" class="w-full ${p.deploy ? null : "pointer-events-none"} absolute z-1 bg-black h-[123px] bg-opacity-10 md:hover:bg-opacity-0 md:bg-opacity-30 cursor-pointer transition-all duration-300"></a>
@@ -50,10 +49,9 @@ const renderProject = () => {
         </div>
       </div > 
       </div>
-      </div>
   `
   }).join("")
-  artProjects.innerHTML = fragment
+  divSwip.innerHTML = fragment
 }
 
 renderProject()

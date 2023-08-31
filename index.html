@@ -132,8 +132,8 @@
       class="w-full max-w-[1200px] h-auto flex flex-col justify-center items-center py-8 mb-10 rounded-lg px-5 min-h-[185px]">
       <div id="projects" class="mt-10 w-full relative">
         <h2 class="text-[1.4rem] self-start border-b w-[50%]">Proyectos</h2>
-        <article id="articleProjects" class="swiper mySwiper">
-          <div id="sww" class="swiper-wrapper py-10">
+        <article class="swiper mySwiper">
+          <div id="divSwiper" class="swiper-wrapper py-10">
 
           </div>
           <div class="swiper-pagination "></div>
@@ -273,7 +273,7 @@
   <script type="module">
     let swiper = new Swiper(".mySwiper", {
       slidesPerView: 3,
-      spaceBetween: 30,
+      spaceBetween: 50,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -282,6 +282,20 @@
         el: ".swiper-pagination",
         clickable: true,
       },
+      breakpoints: {
+        "@0.00": {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        770: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        }
+      }
     })
   </script>
 </body>
