@@ -1,5 +1,4 @@
 import projects from "./projects.js"
-import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs'
 
 const btnHabi = document.getElementById("btnHabilities")
 const habilities = document.getElementById("habilities")
@@ -8,7 +7,7 @@ const secProj = document.getElementById("projects")
 const btnContact = document.getElementById("btnContact")
 const contact = document.getElementById("contact")
 const top = document.getElementById("btnUp")
-const artProjects = document.getElementById("articleProjects")
+const artProjects = document.getElementById("sww")
 const copy = document.getElementById("copy")
 const areaMessage = document.getElementById("message")
 const characters = document.getElementById("characters")
@@ -25,10 +24,8 @@ const renderProject = () => {
   let fragment = ""
   fragment += projects.map((p) => {
     return `
-    <div class="swiper-wrapper">
-    <!-- Slides -->
       <div class="swiper-slide">
-        <div class="w-full flex justify-center items-center card">
+        <div class="flex justify-center items-center card">
         <div class="w-[250px] bg-[#101628] rounded-b-md">
         <div class="mb-2 relative">
         <a href="${p.deploy}" target="_blank" class="w-full ${p.deploy ? null : "pointer-events-none"} absolute z-1 bg-black h-[123px] bg-opacity-10 md:hover:bg-opacity-0 md:bg-opacity-30 cursor-pointer transition-all duration-300"></a>
@@ -54,10 +51,6 @@ const renderProject = () => {
       </div > 
       </div>
       </div>
-    </div>
-  <!-- If we need navigation buttons -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
   `
   }).join("")
   artProjects.innerHTML = fragment
@@ -136,17 +129,3 @@ document.getElementById('form')
         alert(JSON.stringify(err))
       })
   })
-
-  const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  })
-
-  console.log(swiper)
-  

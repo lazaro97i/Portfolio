@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;800&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./swiper-bundle.min.css">
 </head>
 
 <body id="body" class="bg-stone-950 min-h-screen w-full relative">
@@ -132,8 +132,13 @@
       class="w-full max-w-[1200px] h-auto flex flex-col justify-center items-center py-8 mb-10 rounded-lg px-5 min-h-[185px]">
       <div id="projects" class="mt-10 w-full relative">
         <h2 class="text-[1.4rem] self-start border-b w-[50%]">Proyectos</h2>
-        <article id="articleProjects" class="swiper">
+        <article id="articleProjects" class="swiper mySwiper">
+          <div id="sww" class="swiper-wrapper py-10">
 
+          </div>
+          <div class="swiper-pagination "></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </article>
         <!-- <span id="arrowL"
           class="absolute z-40 top-[250px] left-0 rounded-[50%] bg-[#2a4ba3] border-2 w-[30px] h-[30px] flex justify-center items-center"><svg
@@ -263,6 +268,21 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script type="text/javascript">
     emailjs.init('la-JgOodpwT3YnoMB')
+  </script>
+  <script src="./swiper-bundle.min.js"></script>
+  <script type="module">
+    let swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    })
   </script>
 </body>
 
