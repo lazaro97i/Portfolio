@@ -34,9 +34,9 @@ const renderProject = () => {
         <p class="text-sm pl-3 mb-2">${p.category}</p>
         <div class="contact-head flex px-3 py-2 mb-2 items-center justify-evenly flex-wrap gap-1">
          ${p.technologies.map((t) => {
-          return `<p key="${t}" class="px-1 my-1 text-[10px] font-[600] rounded-md text-center ${t}">${t}</p>`
-        }).join("")
-          }
+      return `<p key="${t}" class="px-1 my-1 text-[10px] font-[600] rounded-md text-center ${t}">${t}</p>`
+    }).join("")
+      }
         </div >
         <div class="w-full flex flex-wrap">
         <p class="pl-3 pb-2">Respositorios:</p>
@@ -95,7 +95,7 @@ window.addEventListener("scroll", (e) => {
 
 //---------------------------------------------------------------
 //-------------EMAILJS
-const btn = document.getElementById('button');
+const btn = document.getElementById('button')
 
 document.getElementById('form')
   .addEventListener('submit', function (event) {
@@ -105,25 +105,43 @@ document.getElementById('form')
 
     const serviceID = 'service_80sekxo'
     const templateID = 'template_sfaekwg'
-
-    emailjs.sendForm(serviceID, templateID, this)
-      .then(() => {
-        btn.value = 'Enviar!'
-        // alert('Sent!')
-        document.getElementById("body").innerHTML =
-          `
-      <div class="w-full flex justify-center items-center h-screen fixed bg-black bg-opacity-60">
+    if (document.getElementById("name").value &&
+      document.getElementById("email").value &&
+      document.getElementById("message").value) {
+      emailjs.sendForm(serviceID, templateID, this)
+        .then(() => {
+          btn.value = 'Enviar!'
+          // alert('Sent!')
+          document.getElementById("body").innerHTML =
+            `
+      <div class="w-full flex justify-center items-center h-screen absolute bg-black bg-opacity-60">
         <div class="w-auto h-auto py-10 px-10 flex flex-col gap-10 justify-center items-center bg-[#09090b] border-2 border-[#1c2b4e] rounded-md">
           <h2 class="text-2xl">Su mensaje fue enviado correctamente 👍!!</h2>
           <input id="btnAcept" type="button" value="Aceptar" class="w-[100px] h-[42px] text-center bg-[#244184] font-[500] rounded-md border"/>
         </div>
       </div>
       `
-        document.getElementById("btnAcept").addEventListener("click", (e) => {
-          window.location.reload()
+          document.getElementById("btnAcept").addEventListener("click", (e) => {
+            window.location.reload()
+          })
+        }, (err) => {
+          btn.value = 'Enviar!'
+          alert(JSON.stringify(err))
         })
-      }, (err) => {
+    } else {
+      if (!document.getElementById("name").value) {
+        alert("Debe ingresar un nombre!")
         btn.value = 'Enviar!'
-        alert(JSON.stringify(err))
-      })
+      }
+      if (!document.getElementById("email").value) {
+        alert("Debe ingresar un email!")
+        btn.value = 'Enviar!'
+      }
+      if (!document.getElementById("message").value) {
+        alert("Debe escribir un mensaje!")
+        btn.value = 'Enviar!'
+      }
+
+    }
+
   })
