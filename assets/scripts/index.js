@@ -11,6 +11,7 @@ const divSwip = document.getElementById("divSwiper")
 const copy = document.getElementById("copy")
 const areaMessage = document.getElementById("message")
 const characters = document.getElementById("characters")
+const nav = document.getElementById("nav")
 
 areaMessage.addEventListener("input", (e) => {
   characters.innerHTML = `<p class="text-end">${e.target.textLength} / 1000</p>`
@@ -89,6 +90,11 @@ window.addEventListener("scroll", (e) => {
   } else {
     top.classList.remove("w-12")
     top.classList.add("w-0")
+  }
+  if (window.scrollY > 0) {
+    nav.classList.replace('bg-opacity-0', 'bg-opacity-95')
+  } else {
+    nav.classList.replace('bg-opacity-95', 'bg-opacity-0')
   }
 })
 
