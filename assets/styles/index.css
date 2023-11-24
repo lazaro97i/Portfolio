@@ -20,37 +20,36 @@ h2 {
 }
 
 body {
-  /* background: #09090b; */
-  /* background: linear-gradient(0deg, rgba(28, 25, 23, 1) 0%, rgba(28, 25, 23, 1) 25%, rgba(28, 25, 23, 0) 68%); */
-  /* background-image: url("/assets/images/bg-2.png");
-  background-size: cover;
-  background-repeat: no-repeat; */
-  background: #000428;
+  background: #43cea2;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #004e92, #000428);
+  background: -webkit-linear-gradient(to bottom, #185a9d, #1fba89);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #004e92, #000428);
+  background: linear-gradient(to bottom, #185a9d, #1fba89);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
 
   position: static;
   background-position: top center;
 }
 
 section {
-  background: rgb(9, 9, 11);
-  background: linear-gradient(0deg, rgba(9, 9, 11, 1) 0%, rgba(9, 9, 11, 0.908000700280112) 50%, rgba(9, 9, 11, 0) 100%);
+  /* background: rgb(9, 9, 11);
+  background: linear-gradient(0deg, rgba(9, 9, 11, 1) 0%, rgba(9, 9, 11, 0.908000700280112) 50%, rgba(9, 9, 11, 0) 100%); */
   margin: 0 1rem;
 }
 
 textarea {
-  background: rgb(16, 22, 40);
-  background: linear-gradient(180deg, rgba(16, 22, 40, 1) 19%, rgba(16, 22, 40, 0) 100%);
+  background: #54cea7;
+  /* background: rgb(16, 22, 40); */
+  /* background: linear-gradient(180deg, rgba(16, 22, 40, 1) 19%, rgba(16, 22, 40, 0) 100%); */
 }
 
+/* 
 .contact {
   background: rgb(9, 9, 11);
   background: linear-gradient(180deg, rgba(9, 9, 11, 1) 0%, rgba(9, 9, 11, 0.14889705882352944) 100%);
-}
+} */
 
 .divContact {
   background: rgb(9, 9, 11);
@@ -109,10 +108,16 @@ textarea {
   border: 1px solid #864fdf
 }
 
+.MySQL {
+  background: #085186;
+  color: #eb9721;
+  border: 1px solid #ffff
+}
+
 .slider .slide {
   animation: scroll 15s linear infinite;
   -webkit-animation: scroll 15s linear infinite;
-  width: calc((70px * 28));
+  width: calc((70px * 36));
 }
 
 @keyframes scroll {
@@ -122,8 +127,8 @@ textarea {
   }
 
   100% {
-    transform: translateX(-980px);
-    -webkit-transform: translateX(-980px);
+    transform: translateX(-1258px);
+    -webkit-transform: translateX(-1258px);
   }
 }
 

@@ -65,15 +65,15 @@ const renderCopy = () => {
 renderCopy()
 
 btnHabi.addEventListener("click", (e) => {
-  const href = habilities.offsetTop - 20
+  const href = habilities.offsetTop - 60
   window.scroll({ top: href, behavior: "smooth" })
 })
 btnProj.addEventListener("click", (e) => {
-  const href = secProj.offsetTop - 20
+  const href = secProj.offsetTop - 60
   window.scroll({ top: href, behavior: "smooth" })
 })
 btnContact.addEventListener("click", (e) => {
-  const href = contact.offsetTop - 20
+  const href = contact.offsetTop - 60
   window.scroll({ top: href, behavior: "smooth" })
 })
 top.addEventListener("click", (e) => {
