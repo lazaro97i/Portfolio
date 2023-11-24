@@ -39,17 +39,17 @@
     <section
       class="mx-0 h-auto flex flex-col md:grid md:grid-cols-2 justify-center items-center md:items-start w-full gap-10 relative z-10 md:px-8 pt-20 md:pt-0">
       <nav id="nav"
-        class="fixed top-0 left-0 w-full bg-black bg-opacity-0 flex justify-center md:justify-end md:pr-40  transition-all duration-300">
+        class="fixed top-0 left-0 w-full bg-[#09090b] bg-opacity-0 flex justify-center md:justify-end md:pr-40  transition-all duration-300">
         <ul class="flex justify-center items-center gap-10 md:gap-20 py-3 h-auto">
-          <li id="btnProjects" class="text-[#6dabed] text-lg cursor-pointer">Proyectos</li>
-          <li id="btnHabilities" class="text-[#6dabed] text-lg cursor-pointer">Sobre Mí</li>
-          <li id="btnContact" class="text-[#6dabed] text-lg cursor-pointer">Contacto</li>
+          <li id="btnProjects" class="text-[#b7ffc8] text-lg cursor-pointer">Proyectos</li>
+          <li id="btnHabilities" class="text-[#b7ffc8] text-lg cursor-pointer">Sobre Mí</li>
+          <li id="btnContact" class="text-[#b7ffc8] text-lg cursor-pointer">Contacto</li>
         </ul>
       </nav>
       <div class="flex flex-col md:flex-nowrap justify-center items-center h-full">
         <img class="w-[200px] mt-[5rem] mb-8" src="./assets/images/PerfilCirc (2).jpg" alt="foto perfil">
         <div class="flex flex-col justify-center items-center">
-          <h1 class="text-[1.8rem] md:text-[2.5rem] text-[#6dabed]">Lázaro Tomás Del Prado</h1>
+          <h1 class="text-[1.8rem] md:text-[2.5rem] text-[#b7ffc8]">Lázaro Tomás Del Prado</h1>
           <p class="text-2xl font-[200] self-start">Desarrollador Full Stack</p>
         </div>
         <div class="flex w-full justify-center gap-10 mt-10">
@@ -127,7 +127,7 @@
       </div>
       <div class="flex flex-col gap-5 items-center justify-center content-center h-full px-5 xl:px-20">
         <p class="w-full lg:text-xl md:p-0">¡Hola a todos! 👋 Mi nombre es <span
-            class="text-[#6dabed] font-[600]">Lázaro</span>
+            class="text-[#b7ffc8] font-[600]">Lázaro</span>
           y me desempeño en la creación de soluciones tecnológicas. Les presento mi portafolio, en él encontrarán una
           selección de mis proyectos y habilidades destacadas que muestran mi experiencia en diferentes áreas del
           desarrollo de software.
@@ -311,7 +311,7 @@
   <script src="./assets/scripts/swiper-bundle.min.js"></script>
   <script type="module">
     let swiper = new Swiper(".mySwiper", {
-      slidesPerView: 3,
+      slidesPerView: 1,
       spaceBetween: 50,
       navigation: {
         nextEl: '.swiper-button-next',
@@ -327,11 +327,11 @@
           spaceBetween: 10,
         },
         768: {
-          slidesPerView: 2,
+          slidesPerView: 1,
           spaceBetween: 20,
         },
         1024: {
-          slidesPerView: 3,
+          slidesPerView: 1,
           spaceBetween: 40,
         }
       }

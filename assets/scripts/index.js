@@ -25,31 +25,34 @@ const renderProject = () => {
   let fragment = ""
   fragment += projects.map((p) => {
     return `
-      <div class="swiper-slide flex justify-center w-full">
-        <div class="w-[250px] bg-[#101628] rounded-b-md">
-        <div class="mb-2 relative">
-        <a href="${p.deploy}" target="_blank" class="w-full ${p.deploy ? null : "pointer-events-none"} absolute z-1 bg-black h-[123px] bg-opacity-10 md:hover:bg-opacity-0 md:bg-opacity-30 cursor-pointer transition-all duration-300"></a>
-        <img class="w-full h-[123px] object-contain bg-white z-0" src="${p.image}" alt="ataraxia" />
-        </div>
-        <a href="${p.deploy}" target="_blank" class="text-xl font-[500] w-full text-start pl-3 text-[#9cc9f4] ${p.deploy ? null : "pointer-events-none"}">${p.name}</a>
-        <p class="text-sm pl-3 mb-2">${p.category}</p>
-        <div class="contact-head flex px-3 py-2 mb-2 items-center justify-evenly flex-wrap gap-1">
-         ${p.technologies.map((t) => {
+      <div class="swiper-slide flex flex-wrap justify-center w-[1000px] gap-5 lg:gap-20">
+      <div class="max-[600px]:w-[250px] w-[400px] bg-[#101628] rounded-b-md">
+      <div class="mb-2 relative">
+      <a href="${p.deploy}" target="_blank" class="w-full ${p.deploy ? null : "pointer-events-none"} absolute z-1 bg-black max-[600px]:h-[150px] h-[200px] bg-opacity-10 md:hover:bg-opacity-0 md:bg-opacity-30 cursor-pointer transition-all duration-300"></a>
+      <img class="w-full  max-[600px]:h-[150px] h-[200px] object-contain bg-transparent z-0" src="${p.image}" alt="ataraxia" />
+      </div>
+      <a href="${p.deploy}" target="_blank" class="text-xl font-[500] w-full text-start pl-3 text-[#9cc9f4] ${p.deploy ? null : "pointer-events-none"}">${p.name}</a>
+      <p class="text-sm pl-3 mb-2">${p.category}</p>
+      <div class="contact-head flex px-3 py-2 mb-2 items-center justify-evenly flex-wrap gap-1">
+       ${p.technologies.map((t) => {
       return `<p key="${t}" class="px-1 my-1 text-[10px] font-[600] rounded-md text-center ${t}">${t}</p>`
     }).join("")
       }
-        </div >
-        <div class="w-full flex flex-wrap">
-        <p class="pl-3 pb-2">Respositorios:</p>
-         <div class="flex justify-around px-3 border-b border-[#2a4ba3] w-full pb-3">
-          <a class="font-[500] md:hover:text-[#9cc9f4] transition-all duration-200" target="_blank" href="${p.repositories.front}" >Front</a>
-          <a class="font-[500] md:hover:text-[#9cc9f4] transition-all duration-200" target="_blank" href="${p.repositories.back}" >Back</a>
-          <a class="font-[500] ${p.repositories.mobile ? null : "pointer-events-none"} md:hover:text-[#9cc9f4] transition-all duration-200" target="_blank" href="${p.repositories.mobile}" >${p.repositories.mobile ? "Mobile" : "-"}</a>
-         </div>
-         <a class="${p.deploy ? null : "pointer-events-none"} btnDeploy font-[500] w-full text-center py-1 bg-[#1e2f5c] rounded-b-md hover:bg-[#1e356e] transition-all duration-300 min-h-[32px]" href="${p.deploy}" target="_blank">${p.deploy ? "Deploy" : ""}</a>
-        </div>
-      </div > 
-      </div>
+      </div >
+      <div class="w-full flex flex-wrap">
+      <p class="pl-3 pb-2">Respositorios:</p>
+       <div class="flex justify-around px-3 border-b border-[#2a4ba3] w-full pb-3">
+        <a class="font-[500] md:hover:text-[#9cc9f4] transition-all duration-200" target="_blank" href="${p.repositories.front}" >Front</a>
+        <a class="font-[500] md:hover:text-[#9cc9f4] transition-all duration-200" target="_blank" href="${p.repositories.back}" >Back</a>
+        <a class="font-[500] ${p.repositories.mobile ? null : "pointer-events-none"} md:hover:text-[#9cc9f4] transition-all duration-200" target="_blank" href="${p.repositories.mobile}" >${p.repositories.mobile ? "Mobile" : "-"}</a>
+       </div>
+       <a class="${p.deploy ? null : "pointer-events-none"} btnDeploy font-[500] w-full text-center py-1 bg-[#1e2f5c] rounded-b-md hover:bg-[#1e356e] transition-all duration-300 min-h-[32px]" href="${p.deploy}" target="_blank">${p.deploy ? "Deploy" : ""}</a>
+          </div>
+        </div > 
+      <p class="w-[500px] break-words order-[-1] md:order-1 text-justify">
+        ${p.description}
+      </p>
+    </div>
   `
   }).join("")
   divSwip.innerHTML = fragment
@@ -92,9 +95,9 @@ window.addEventListener("scroll", (e) => {
     top.classList.add("w-0")
   }
   if (window.scrollY > 0) {
-    nav.classList.replace('bg-opacity-0', 'bg-opacity-95')
+    nav.classList.replace('bg-opacity-0', 'bg-opacity-90')
   } else {
-    nav.classList.replace('bg-opacity-95', 'bg-opacity-0')
+    nav.classList.replace('bg-opacity-90', 'bg-opacity-0')
   }
 })
 

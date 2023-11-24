@@ -58,8 +58,8 @@ textarea {
 
 .contact-head {
   background: rgb(54, 112, 218);
-  background: radial-gradient(circle, rgba(54, 112, 218, 0.42620798319327735) 0%, rgba(54, 112, 218, 0) 100%);
-  border-color: rgba(54, 111, 218, 0.432);
+  background: radial-gradient(circle, rgba(60, 201, 168, 0.426) 0%, rgba(54, 112, 218, 0) 100%);
+  border-color: rgba(80, 179, 123, 0.432);
 }
 
 .JavaScript {
@@ -118,6 +118,10 @@ textarea {
   animation: scroll 15s linear infinite;
   -webkit-animation: scroll 15s linear infinite;
   width: calc((70px * 36));
+}
+
+:root {
+  --swiper-theme-color: white !important
 }
 
 @keyframes scroll {
