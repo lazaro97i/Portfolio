@@ -6,7 +6,7 @@ const projects = [
     date: "09/2023 - Actualidad",
     technologies: ["JavaScript", "React", "Redux", "Node", "Express", "MongoDB", "JWT"],
     category: "Administracion",
-    description: `Sistema de administración de licencias para empleados del Departamento de Vialidad de San Miguel de Tucumán. Básicamente, registra un histórico de licencias para luego poder imprimir o guardar su respectivo informe detallado, generado en formato PDF. Los usuarios cuentan con roles de Administrador o Usuario, dependiendo de ello van a poder gestionar diferentes funciones del sistema.<br> <b>ACCESO ADM:</b><br><u>User:</u> 1234<br> <u>Password:</u> user1234`,
+    description: `Sistema de administración de licencias para empleados del Departamento de Vialidad de San Miguel de Tucumán. Registra un histórico de licencias para luego poder imprimir o guardar su respectivo informe detallado, generado en formato PDF. Los usuarios cuentan con roles de Administrador o Usuario, dependiendo de ello van a poder gestionar diferentes funciones del sistema.<br> <b>ACCESO ADM:</b><br><u>User:</u> 1234<br> <u>Password:</u> user1234`,
     repositories: {
       back: "https://github.com/lazaro97i/LicenciasDPVT",
       front: "https://github.com/lazaro97i/LicenciasDPVT",
