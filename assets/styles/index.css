@@ -114,6 +114,18 @@ textarea {
   border: 1px solid #ffff
 }
 
+.Java {
+  background: #e9e9e9;
+  color: #1b4aba;
+  border: 1px solid #cb8707
+}
+
+.Spring-Boot {
+  background: #ffffff;
+  color: #3ec608;
+  border: 1px solid #01bb05
+}
+
 .slider .slide {
   animation: scroll 15s linear infinite;
   -webkit-animation: scroll 15s linear infinite;
