@@ -29,6 +29,20 @@ const projects = [
     deploy: "https://ataraxia-front.onrender.com/"
   },
   {
+    name: "CRUD Usuarios",
+    image: "./assets/images/crud_users.png",
+    date: "01/2024 - 02/2024",
+    technologies: ["Java", "Spring Boot", "JavaScript", "Vite", "React", "MySQL"],
+    category: "ABM",
+    description: "Sistema de gestión de usuarios, un proyecto diseñado con tecnologías avanzadas para ofrecer una solución robusta y eficiente. Desarrollado con Spring Boot en el backend para construir un backend eficiente que gestiona la lógica de negocio y facilita las operaciones CRUD de manera rápida y segura, Hibernate y JPA para la persistencia en MySQL, y React en el frontend, nuestro sistema permite realizar operaciones esenciales de Crear, Leer, Actualizar y Eliminar (CRUD) usuarios de manera intuitiva y ágil.",
+    repositories: {
+      back: "https://github.com/lazaro97i/abm_user_back",
+      front: "https://github.com/lazaro97i/abm_usuarios/tree/main/front",
+      mobile: null
+    },
+    deploy: "https://users-abm.onrender.com/"
+  },
+  {
     name: "ABM de series",
     image: "./assets/images/abm_series.png",
     date: "10/2023 - 10/2023",
